@@ -77,7 +77,7 @@ suffix = case RbConfig::CONFIG['host_os']
 
 suffix = ENV['WKHTMLTOPDF_HOST_SUFFIX'] unless ENV['WKHTMLTOPDF_HOST_SUFFIX'].to_s.empty?
 
-binary = "#{__FILE__}_#{suffix}"
+binary = "#{__FILE__}_ubuntu_22.04_amd64"
 
 if File.exist?("#{binary}.gz") && !File.exist?(binary)
   File.open binary, 'wb', 0o755 do |file|
